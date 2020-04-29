@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container areaCalculadora">
+        <h1>Caluladora</h1>
+        <hr>
+        <form action="">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-12">
+                        <label for="">Nome do aluno:</label>
+                        <input type="text" class="form-control" name="name" value="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label for="">Nota da Prova 1 (P1):</label>
+                        <input type="number" class="form-control" name="p1" id="p1" value="p1">
+                    </div>
+                    <div class="col-12">
+                        <label for="">Nota da Prova 2 (P2):</label>
+                        <input type="number" class="form-control" name="p2" id="p2" value="p2">
+                    </div>
+                </div>
+                <hr>
+                <div class="row justify-content-end">
+                    <div class="col-6">
+                        <button type="button" id="btnCalcP3Min" onclick="" class="btn btn-outline-warning">Calular nota mínima (P3):</button>
+                    </div>
+                    <div class="col-6">
+                        <input id="p3MinResultado" type="text" class="form-control" value="" readonly />
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <label for="">Nota da Prova 3 (P3):</label>
+                    <input type="number" class="form-control" name="p3" id="p3" value="p3">
+                </div>
+            </div>
+            <div class="row">
+                <label for="">Média:</label>
+                <input id="mediaResultado" type="text" class="form-control" value="" readonly />
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-6">
+                    <button id="btnCalcMedia" onclick="" type="button" class="btn btn-outline-success">Calcular Média</button>
+                </div>
+                <div class="col-6">
+                    <button id="btnLimpar" onclick="" type="button" class="btn btn-outline-danger">Limpar</button>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <label for="">Resultado:</label>
+                <input id="resultadoText" type="text" class="form-control" value="" readonly />
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+
+</html>
