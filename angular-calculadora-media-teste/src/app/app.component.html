@@ -1,0 +1,79 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="areaCalculadora container">
+  <div class="row titulo">
+    <h1>{{ title }}</h1>
+  </div>
+
+  <hr class="hr-titulo">
+
+  <form action="" class="form-calc p-0 m-0">
+    <div class="form-group dados">
+      <div class="row nome-notas">
+        <div class="col-sm-12 p-1">
+          <label for="">Nome do aluno:</label>
+          <input type="text" class="form-control" name="name" value="">
+        </div>
+      </div>
+      <div class="row m-0">
+        <div class="col-sm-4 p-1">
+          <label for="">Nota da Prova 1:</label>
+          <input type="number" class="form-control" name="p1" id="p1" [(ngModel)]="p1">
+        </div>
+        <div class="col-sm-4 p-1">
+          <label for="">Nota da Prova 2:</label>
+          <input type="number" class="form-control" name="p2" id="p2" [(ngModel)]="p2">
+        </div>
+        <div class="col-sm-4 p-1">
+          <label for="">Nota da Prova 3: (*)</label>
+          <input type="number" class="form-control p3" name="p3" id="p3" [(ngModel)]="p3">
+        </div>
+      </div>
+    </div>
+
+    <hr class="hr-meio">
+
+    <div class="row calcP3">
+      <div class="col-sm-12 p-1">
+        <button type="button" id="btnCalcP3Min" (click)="calculoP3Min()" class="btn">Calcular nota
+          mínima na Prova 3: (*)</button>
+      </div>
+      <div class="col-sm-12 p-1">
+        <p>A nota mínima deverá ser:</p>
+        <p class="p3resultado m-0">{{ p3MinResultado }}</p>
+      </div>
+    </div>
+
+    <hr class="hr-meio">
+
+    <div class="resultado m-0">
+      <div class="row p-1">
+        <div class="col-sm-12">
+          <button id="btnCalcMedia" (click)="calculoMedia()" type="button" class="btn">Calcular
+            Média</button>
+        </div>
+      </div>
+      <div class="row p-2">
+        <span class="p-2">Média mínima para aprovação: 6.2</span>
+        <div class="col-sm-12 p-2">
+          <label for="" class="">Média:</label>
+          <p class="m-0">{{ mediaResultado }}</p>
+        </div>
+        <div class="col-sm-12 p-2">
+          <label for="" class="">Resultado:</label>
+          <p class="m-0">{{ resultadoText }}</p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="hr-fim">
+
+    <div class="row p-1">
+      <div class="col-sm-12">
+        <button id="btnLimpar" (click)="limparDados()" type="button" class="btn">Limpar</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<app-footer></app-footer>
