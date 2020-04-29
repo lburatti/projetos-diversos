@@ -1,0 +1,64 @@
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    margin: 0px;
+    display: grid;
+    grid-template-rows: 80px 1fr 50px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "header"
+        "content"
+        "footer";
+}
+.header {
+    grid-area: "header";
+    background-color: #dee2e6;
+    color: rgba(0, 0, 0, 0.541);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    /* GERADOR https://www.cssmatic.com/box-shadow */
+    box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.43);
+}
+.header h1 {
+    margin: 0px;
+    font-weight: 350;
+    font-size: 2.3rem;
+}
+.main {
+    grid-area: "content";
+    height: calc(100vh - 130px);
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+.content {
+    position: relative;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.27);
+}
+.content h2 {
+    margin: 0px;
+    font-weight: 250;
+    font-size: 2rem;
+}
+.footer {
+    grid-area: "footer";
+    background-color: #dee2e6;
+    color: rgba(0, 0, 0, 0.541);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.43);
+}
+.footer h2 {
+    margin: 0px;
+    font-weight: 350;
+    font-size: 1.8rem;
+}
